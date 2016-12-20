@@ -5,6 +5,7 @@ $outdated = (version_compare($version, $github_version, ">=")) ? false : true;
 
 if (isset($_GET['update']) && $outdated == true) {
     file_put_contents(__FILE__, file_get_contents('https://raw.githubusercontent.com/RumbleFrog/DragonballStatistical/master/Log.php'));
+    header("Location: " . $_SERVER['REQUEST_URI']);
 }
 
 
