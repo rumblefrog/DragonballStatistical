@@ -1,6 +1,6 @@
 # DragonballStatistical
 
-https://github.com/RumbleFrog/DragonballStatistical/blob/master/assets/Log.png
+![LogPreview](https://github.com/RumbleFrog/DragonballStatistical/blob/master/assets/Log.png)
 
 # Prerequisites
 * Apache or any web server
