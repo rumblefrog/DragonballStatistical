@@ -1,5 +1,5 @@
 <?php
-$version = '1.1.0';
+$version = '1.1.1';
 $github_version = ltrim(json_decode(file_get_contents('https://api.github.com/repos/RumbleFrog/DragonballStatistical/releases/latest', false, stream_context_create(array('http'=> array('method'=>"GET", 'header'=>"Accept-language: en\r\n" . "Cookie: foo=bar\r\n" . "User-Agent: DragonballStatistical\r\n")))), true)['tag_name'], 'v');
 $outdated = (version_compare($version, $github_version, ">=")) ? false : true;
 
@@ -91,7 +91,7 @@ $occurrence = $a_request['occurrence'];
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <table class="table table-hover">
+                                <table class="table table-hover table-responsive">
                                     <thead>
                                     <tr>
                                         <th>Name</th>
