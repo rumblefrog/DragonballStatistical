@@ -91,7 +91,7 @@ $occurrence = $a_request['occurrence'];
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <table class="table table-hover table-responsive">
+                                <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>Name</th>
