@@ -1,5 +1,5 @@
 <?php
-$version = '1.1.1';
+$version = '1.1.2';
 $github_version = ltrim(json_decode(file_get_contents('https://api.github.com/repos/RumbleFrog/DragonballStatistical/releases/latest', false, stream_context_create(array('http'=> array('method'=>"GET", 'header'=>"Accept-language: en\r\n" . "Cookie: foo=bar\r\n" . "User-Agent: DragonballStatistical\r\n")))), true)['tag_name'], 'v');
 $outdated = (version_compare($version, $github_version, ">=")) ? false : true;
 
@@ -129,8 +129,11 @@ $occurrence = $a_request['occurrence'];
                }
             });
             Highcharts.chart('servers-graph', {
+                chart: {
+                    zoomType: 'x'
+                },
                 title: {
-                    text: 'Servers Stats'
+                    text: 'Server Statistics'
                 },
                 xAxis: {
                     type: 'datetime',
@@ -166,7 +169,7 @@ $occurrence = $a_request['occurrence'];
                             $x[] = $y;
                         } ?>
                 {
-                    type: 'spline',
+                    type: 'area',
                     name: '<?= $k; ?>',
                     turboThreshold: 0,
                     data: <?= json_encode($x, JSON_NUMERIC_CHECK); ?>,
@@ -187,7 +190,7 @@ $occurrence = $a_request['occurrence'];
                     }, <?php $i++; } ?>
                     ],
                         tooltip: {
-                            pointFormat: '{series.name} of <b>{point.y:,.0f}</b><br/>players'
+                            pointFormat: 'Occupied <b>{point.percentage:,.0f}</b>% of monthly traffic'
                         },
                     center: [100, 80],
                     size: 100,
