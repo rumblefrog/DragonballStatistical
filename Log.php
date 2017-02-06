@@ -9,9 +9,9 @@ if (isset($_GET['update']) && $outdated == true) {
 }
 
 
-$s_request = json_decode(file_get_contents('https://dragonball.biturl.io/lib/ExtensiveFetch/Servers.php'), true);
-$a_request = json_decode(file_get_contents('https://dragonball.biturl.io/lib/ExtensiveFetch/Admins.php'), true);
-$vc_request = json_decode(file_get_contents('https://dragonball.biturl.io/lib/ExtensiveFetch/Server_List.php'), true);
+$s_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Servers.php'), true);
+$a_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Admins.php'), true);
+$vc_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Server_List.php'), true);
 
 $i = 0;
 $pie = [];
@@ -84,7 +84,7 @@ $occurrence = $a_request['occurrence'];
                                 <div id="servers-graph"></div>
                             </div>
                             <footer class="card-footer">
-                                <a href="https://dragonball.biturl.io/lib/ExtensiveFetch/Servers.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
+                                <a href="https://maxdb.net/lib/ExtensiveFetch/Servers.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
                             </footer>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ $occurrence = $a_request['occurrence'];
                                 </table>
                             </div>
                             <footer class="card-footer">
-                                <a href="https://dragonball.biturl.io/lib/ExtensiveFetch/Admins.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
+                                <a href="https://maxdb.net/lib/ExtensiveFetch/Admins.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
                             </footer>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ $occurrence = $a_request['occurrence'];
                                 </ul>
                             </div>
                             <footer class="card-footer">
-                                <a href="https://dragonball.biturl.io/lib/ExtensiveFetch/Server_List.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
+                                <a href="https://maxdb.net/lib/ExtensiveFetch/Server_List.php" target="_blank" class="btn btn-flat btn-warning">View Raw Source</a>
                             </footer>
                         </div>
                     </div>
