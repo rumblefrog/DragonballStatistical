@@ -8,7 +8,7 @@ if (isset($_GET['update']) && $outdated == true) {
     header("Location: //" . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'));
 }
 
-
+//Group concat limitation
 $s_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Servers.php'), true);
 $a_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Admins.php'), true);
 $vc_request = json_decode(file_get_contents('https://maxdb.net/lib/ExtensiveFetch/Server_List.php'), true);
